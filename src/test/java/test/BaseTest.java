@@ -17,12 +17,12 @@ public class BaseTest {
     @BeforeMethod
     public void setup() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        // caps.setCapability("deviceName", "rp9");
-        // caps.setCapability("udid", "bc3d16b3");
-        caps.setCapability("deviceName", "Pixel_3a_API_30_x86");
-        caps.setCapability("udid", "emulator-5554");
+        caps.setCapability("deviceName", "ZZZ");
+        caps.setCapability("udid", "ddab6a66");
+        // caps.setCapability("deviceName", "Pixel_3a_API_30_x86");
+        // caps.setCapability("udid", "emulator-5554");
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "11.0");
+        caps.setCapability("platformVersion", "9.0");
         caps.setCapability("skipUnlock", "true");
         caps.setCapability("appPackage", "net.amp.era");
         caps.setCapability("appActivity", "my.com.astro.radiox.presentation.screens.launch.LaunchActivity");
@@ -35,5 +35,4 @@ public class BaseTest {
     public void teardown() {
         driver.quit();
     }
-
 }
