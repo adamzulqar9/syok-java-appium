@@ -17,7 +17,7 @@ Mobile app testing using Java and Appium with TestNG as the test framework
 
 ---------------------------------------------------------
 
-#### Project are separated into 3 main subfolders:
+#### Project is separated into 3 main subfolders:
 
 ![alt text](https://github.com/adamzulqar9/syok-java-appium/blob/alpha-dev/project_structure.PNG "Project Structure")
 1. **functions**
@@ -45,6 +45,6 @@ Mobile app testing using Java and Appium with TestNG as the test framework
 // TODO:
 1. Fix test_runner.bat execution: dependencies/classpath issues
 2. Once test_runner.bat fixed, can schedule job on Jenkins for test executions and test reporting
-3. Implement checkings for video: Appium Inspector/UIAutomator doesnt return webview/video elements. May need to implement screenshot verification to verify video
+3. Implement checkings for video: Appium Inspector/UIAutomatorViewer doesnt return webview/video elements. May need to implement screenshot verification to verify video
 4. Implement proper logging for debugging
 5. Implement capture screenshot upon test assertion failure
