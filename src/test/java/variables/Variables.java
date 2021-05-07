@@ -30,6 +30,7 @@ public class Variables {
     public static String radioListTextElem  = "//androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[{0,number,#}]/android.widget.TextView";
     public static String selectStationElem  = "//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[{0,number,#}]/android.widget.TextView";
     public static String sliderStationElem  = "//android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[{0,number,#}]/android.widget.TextView";
+    public static String selectedElem= "//android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[{0,number,#}]";
     public static List<String> expectedRadioList = Arrays.asList("ERA", "HITZ", "MIX", "MY", "LITE", "SINAR", "RAAGA", "GEGAR", "MELODY", "ZAYAN", "GOXUAN",
             "ERA (SABAH)", "HITZ (SABAH)", "MY (SABAH)", "ERA (SARAWAK)", "HITZ (SARAWAK)", "MY (SARAWAK)", "ASTRO AWANI", "SYOK BAYU",
             "SYOK GOLD", "SYOK INDIA BEAT", "SYOK JAZZ", "SYOK KENYALANG", "SYOK OPUS", "SYOK OSAI", "SYOK CLASSIC ROCK", "ASTRO ARENA");
@@ -40,5 +41,11 @@ public class Variables {
     public static By videoTabElem           = By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc='Video']");
     public static By firstVideoElem         = By.xpath("//android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]");
     public static By secondVideoElem        = By.xpath("//android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]");
+    public static By closeSearchElem        = By.id("net.amp.era:id/ivHeaderSearchClose");
+    public static By backElem               = By.id("net.amp.era:id/tvIncludedBackArrow");
+    public static By firstVideoTitleElem    = By.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]");
+    public static By firstVideoInfoElem     = By.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/android.widget.TextView[2]");
+    public static By secondVideoTitleElem   = By.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.LinearLayout[2]/android.widget.TextView[1]");
+    public static By secondVideoInfoElem    = By.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.LinearLayout[2]/android.widget.TextView[2]");
     public static String searchFor          = "Hot on SYOK";
 }

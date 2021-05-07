@@ -40,9 +40,9 @@ public class Functions {
         MobileElement right = driver.findElement(By.xpath(lastStation));
 
         int midOfY = left.getLocation().y + (left.getSize().height/2);
-        int leftX = 25;
+        int leftX = 28;
         // int leftX = left.getLocation().x;
-        int rightX = 920;
+        int rightX = 915;
         // int rightX = right.getLocation().x;
 
         System.out.println("Scrolling right");
@@ -55,21 +55,25 @@ public class Functions {
 
     public static void goToHomePage(AndroidDriver<MobileElement> driver, WebDriverWait wait) {
         String proceedText = wait.until(ExpectedConditions.visibilityOfElementLocated(Variables.proceedElem)).getText();
-        Assert.assertEquals(proceedText, "PROCEED");
-        driver.findElement(Variables.proceedElem).click();
+        String proceed = "PROCEED";
+        checkText(proceedText, proceed);
+        waitAndClick(wait, Variables.proceedElem, proceed);
+        // driver.findElement(Variables.proceedElem).click();
 
         String languageTitleText = wait.until(ExpectedConditions.visibilityOfElementLocated(Variables.languageTitleElem)).getText();
-        Assert.assertEquals(languageTitleText, "Choose your language");
+        checkText(languageTitleText, "Choose your language");
 
         // Select Bahasa
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Variables.languageElem)).get(2).click();
 
         String nextText = wait.until(ExpectedConditions.visibilityOfElementLocated(Variables.nextElem)).getText();
-        Assert.assertEquals(nextText, "NEXT");
-        driver.findElement(Variables.nextElem).click();
+        String next = "NEXT";
+        checkText(nextText, "NEXT");
+        waitAndClick(wait, Variables.nextElem, next);
+        // driver.findElement(Variables.nextElem).click();
 
         String radioSelectTitleText = wait.until(ExpectedConditions.visibilityOfElementLocated(Variables.radioSelectTitleElem)).getText();
-        Assert.assertEquals(radioSelectTitleText, "Listen Now");
+        checkText(radioSelectTitleText, "Listen Now");
 
         // Select first radio in list
         driver.findElements(Variables.radioListElem).get(0).click();
@@ -93,7 +97,7 @@ public class Functions {
         }
 
         // Check for advert and close
-        for (int i = 0; i < 3; i++) {
+        for (int i = 1; i < 4; i++) {
             try {
                 if (wait.until(ExpectedConditions.visibilityOfElementLocated(Variables.advertElem)).isDisplayed()) {
                     waitAndClick(wait, Variables.closeAdvertElem, "Close advert button");
@@ -112,6 +116,11 @@ public class Functions {
         } catch (TimeoutException error) {
             System.out.println(" - NOK");
         }
+    }
 
+    public static void checkText(String actualText, String expectedText) {
+        System.out.print("\t- Checking text: " + expectedText);
+        Assert.assertEquals(actualText, expectedText);
+        System.out.println(" - OK");
     }
 }
