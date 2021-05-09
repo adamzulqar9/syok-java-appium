@@ -5,8 +5,10 @@
         <classes>
             <class name="test.RadioTest"/>
         </classes>
-<!--        <packages>-->
-<!--            <package name="test" />-->
-<!--        </packages>-->
+    </test> <!-- Test -->
+    <test name="Syok Video">
+        <classes>
+            <class name="test.VideoTest"/>
+        </classes>
     </test> <!-- Test -->
 </suite>
