@@ -17,17 +17,17 @@ Mobile app testing using Java and Appium with TestNG as the test framework
 
 ---------------------------------------------------------
 
-#### Project are separated into 3 main subfolders:
+#### Project is separated into 3 main subfolders:
 
 ![alt text](https://github.com/adamzulqar9/syok-java-appium/blob/alpha-dev/project_structure.PNG "Project Structure")
-1. functions
-* Helper functions for test are defined here, will then be called from the test scripts
-* Reason: Code reusability, code maintenance, changes to API can be handled easier (less risk to break entire tests)
-3. test
+1. **functions**
+* Helper functions for tests are defined here, will then be called from the test scripts
+* Reason: Code reusability, easier code maintenance, changes to API can be handled easier (less risk to break entire tests)
+2. **test**
 * BaseTest is the base class for all the tests, this is where setup and teardown methods are called
 * Test classes will extend BaseTest class and perform specific actions for testing specific features/functionalities
-* Reason: Code maintenance, Test extensibility (create new class and extend BaseTest class for new tests)
-5. variables
+* Reason: Code maintenance, test extensibility (create new class and extend BaseTest class for new tests)
+3. **variables**
 * All variables and elements that will be used in testing will be declared here
 * Reason: Variables reusability, changes to elements can be handled easier (less risk to break entire tests)
 
@@ -45,6 +45,6 @@ Mobile app testing using Java and Appium with TestNG as the test framework
 // TODO:
 1. Fix test_runner.bat execution: dependencies/classpath issues
 2. Once test_runner.bat fixed, can schedule job on Jenkins for test executions and test reporting
-3. Implement checkings for video: Appium Inspector/UIAutomator doesnt return webview/video elements. May need to implement screenshot verification to verify video
+3. Implement checkings for video: Appium Inspector/UIAutomatorViewer doesnt return webview/video elements. May need to implement screenshot verification to verify video
 4. Implement proper logging for debugging
 5. Implement capture screenshot upon test assertion failure
