@@ -35,16 +35,14 @@ Mobile app testing using Java and Appium with TestNG as the test framework
 
 ### Test execution:
 1. Execute test using TestNG config from IntelliJ
-2. Execute test using test_runner.bat (using testng.xml) from Jenkins with the option of scheduler (e.g. every 5 minute) - WIP
+2. Execute test using test_runner.bat (using testng.xml) from Jenkins with the option of scheduler (e.g. every 5 minute)
 
 ---------------------------------------------------------
 
 ### Test Execution Demo:
-[![Watch the video](https://i.imgur.com/QI7koxb.jpeg)](https://streamable.com/231nsd)
+[![Watch the video](https://i.imgur.com/S1ChGPe.png)](https://streamable.com/hfiqdk)
 
 // TODO:
-1. Fix test_runner.bat execution: dependencies/classpath issues
-2. Once test_runner.bat fixed, can schedule job on Jenkins for test executions and test reporting
-3. Implement checkings for video: Appium Inspector/UIAutomatorViewer doesnt return webview/video elements. May need to implement screenshot verification to verify video
-4. Implement proper logging for debugging
-5. Implement capture screenshot upon test assertion failure
+1. Implement checkings for video: Appium Inspector/UIAutomatorViewer doesnt return webview/video elements. May need to implement screenshot verification to verify video
+2. Implement proper logging for debugging
+3. Implement capture screenshot upon test assertion failure
