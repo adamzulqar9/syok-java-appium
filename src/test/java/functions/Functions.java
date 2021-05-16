@@ -68,7 +68,7 @@ public class Functions {
 
         String nextText = wait.until(ExpectedConditions.visibilityOfElementLocated(Variables.nextElem)).getText();
         String next = "NEXT";
-        checkText(nextText, "NEXT");
+        checkText(nextText, next);
         waitAndClick(wait, Variables.nextElem, next);
         // driver.findElement(Variables.nextElem).click();
 
