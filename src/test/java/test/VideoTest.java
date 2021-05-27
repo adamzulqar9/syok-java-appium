@@ -6,6 +6,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import variables.Variables;
 
 public class VideoTest extends BaseTest{
     @Test
