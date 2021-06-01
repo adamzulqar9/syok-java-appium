@@ -45,4 +45,3 @@ Mobile app testing using Java and Appium with TestNG as the test framework
 // TODO:
 1. Implement checkings for video: Appium Inspector/UIAutomatorViewer doesnt return webview/video elements. May need to implement screenshot verification to verify video
 2. Implement proper logging for debugging
-3. Implement capture screenshot upon test assertion failure
